@@ -32,9 +32,9 @@ class Content extends React.Component {
             },
         ];
         return (
-            <section className={styles.content}>
+            <section className="w-full flex-col relative h-[80vh]">
                 <Swiper
-                    className={styles.swiper}
+                    className="w-full relative"
                     effect={"fade"}
                     modules={[EffectFade, Pagination, Autoplay]}
                     slidesPerView={1}
@@ -48,29 +48,29 @@ class Content extends React.Component {
                     }}
                 >
                     {images.map((item, index) => (
-                        <SwiperSlide className={styles.slide} key={index}>
-                            <img className={styles.image}
+                        <SwiperSlide className="bg-dark-text" key={index}>
+                            <img className="opacity-[.6]"
                                  src={item.img}/>
-                            <p className={styles.description}>{item.title}</p>
+                            <p className="absolute bottom-0 left-0 text-white pl-8 pb-4">{item.title}</p>
                         </SwiperSlide>
                     ))}
-                    <div className={styles.container}>
-                        <div className={styles.wrapper}>
+                    <div className="absolute top-0 left-0 bottom-0 right-0 w-full h-full z-10 m-8">
+                        <div className="w-[70%] h-full flex-col">
                             <h2 className="text-white text-5xl mb-10 mt-4">We’ll prepare you for the unexpected</h2>
                             <p className="text-white">Feel like a real estate pro and don’t let the surprises take
                                 you off course.
                                 <br/>
                                 Our experts will guide you and help you fulfill your dreams.</p>
-                            <div className={styles.search_container}>
-                                <div className={styles.switch_wrapper}>
-                                    <p className={`${styles.switch} ${styles.switch_active}`}>For Sale</p>
-                                    <p className={styles.switch}>For Rent</p>
+                            <div className="flex-col justify-center w-10/12 mt-20"> {/*search_container*/}
+                                <div className="flex w-fit">
+                                    <p className="pt-2 pr-1 pb-2 pl-1 border-b-2 border-accent">For Sale</p>
+                                    <p className="pt-2 pr-1 pb-2 pl-1 border-b-2">For Rent</p>
                                 </div>
-                                <div className={styles.search}>
+                                <div className="w-full mt-4 flex">
                                     <input placeholder={"Enter city, zip, neighborhood, address…"}
-                                           className={styles.search_input}/>
-                                    <div className={styles.search_icon_wrapper}>
-                                        <SearchIcon className={styles.search_icon}/>
+                                           className="font-raleway font-bold w-full p-6 h-full border-none"/>
+                                    <div className="flex items-center justify-center bg-accent cursor-pointer w-20">
+                                        <SearchIcon className="w-8 h-8"/>
                                     </div>
                                 </div>
                             </div>
