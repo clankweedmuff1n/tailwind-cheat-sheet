@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --accent: 9, 176, 176;
+        --accent--tone: 5, 103, 103;
+        --accent__bg--dark: 2, 156, 156;
+        --accent__bg--light: 10, 199, 199;
+        --accent__border--tone: 16, 193, 193;
+        --accent__text--dark: 3, 53, 53;
+        --accent__text--tone: 16, 193, 193;
+        --accent__textOn: 255, 255, 255;
+        --accent__textOn--tone: 242, 242, 242;
+        --active: 46, 204, 113;
+        --alternative: 7, 131, 131;
+        --alternative--tone: 3, 58, 58;
+        --alternative__textOn: 255, 255, 255;
+        --alternative__textOn--tone: 242, 242, 242;
+        --coming_soon: 52, 152, 219;
+        --dark__bg: 45, 45, 55;
+        --dark__bg--super: 0, 0, 0;
+        --dark__bg--tone: 67, 67, 78;
+        --dark__border: 45, 45, 55;
+        --dark__border--tone: 60, 60, 68;
+        --dark__text: 45, 45, 55;
+        --dark__text--desaturated: 108, 108, 122;
+        --dark__text--tone: 67, 67, 78;
+        --light__bg: 255, 255, 255;
+        --light__bg--desaturated: 255, 255, 255;
+        --light__bg--tone: 239, 239, 239;
+        --light__border: 237, 240, 242;
+        --light__border--tone: 208, 216, 221;
+        --light__text: 255, 255, 255;
+        --light__text--desaturated: 140, 140, 140;
+        --light__text--tone: 239, 239, 239;
+        --newly_listed__bg: 65, 131, 215;
+        --newly_listed__text: 255, 255, 255;
+        --open_house__bg: 255, 255, 255;
+        --open_house__text: 34, 38, 43;
+        --pending: 230, 126, 34;
+        --sold: 255, 0, 0;
+        --under_contract: 241, 196, 15;
+        --various_statuses: 174, 183, 195;
+
+        --background: 0 0% 100%;
+        --foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 47.4% 11.2%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 47.4% 11.2%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 224 71% 4%;
+        --foreground: 213 31% 91%;
+
+        --muted: 223 47% 11%;
+        --muted-foreground: 215.4 16.3% 56.9%;
+
+        --accent: 216 34% 17%;
+        --accent-foreground: 210 40% 98%;
+
+        --popover: 224 71% 4%;
+        --popover-foreground: 215 20.2% 65.1%;
+
+        --border: 216 34% 17%;
+        --input: 216 34% 17%;
+
+        --card: 224 71% 4%;
+        --card-foreground: 213 31% 91%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 1.2%;
+
+        --secondary: 222.2 47.4% 11.2%;
+        --secondary-foreground: 210 40% 98%;
+
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 216 34% 17%;
+
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+    width: 100%;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    line-height: 1.75rem;
+    letter-spacing: 0;
+    text-indent: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Libre Baskerville";
+    color: rgba(var(--dark__text--tone), 1);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    hyphens: initial;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.45rem;
+    overflow-wrap: break-word;
+    position: relative;
+    font-family: "Source Sans 3";
+    color: rgba(var(--dark__text--tone), 1);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    height: 100%;
+}
+
+.swiper-slide {
+
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 90vh;
+        max-height: 950px;
+        height: 90vh;
+        object-fit: cover;
+    }
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-pagination-bullet-active {
+    border: 3px solid transparent !important;
+    background-color: white;
+}
+
+.swiper-pagination-bullet {
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+    border: 3px solid white;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    pointer-events: all !important;
+}

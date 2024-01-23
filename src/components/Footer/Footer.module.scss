@@ -1,0 +1,33 @@
+.title {
+  color: black;
+  font-size: 1rem;
+  letter-spacing: .02em;
+  line-height: 1.35rem;
+  font-family: "Libre Baskerville";
+  font-weight: 400;
+}
+
+.subtitle {
+  cursor: pointer;
+  font-family: "Source Sans 3";
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.title_wrapper {
+  position: relative;
+  &::after {
+    background: rgba(var(--accent), 1);
+    bottom: -0.8rem;
+    content: "";
+    height: 0.1rem;
+    left: 0;
+    position: absolute;
+    width: 1rem;
+  }
+}
+
+.text {
+  font-family: "Source Sans 3";
+
+}

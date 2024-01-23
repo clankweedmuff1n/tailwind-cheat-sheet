@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 20vh;
+  margin: 0 auto;
+
+  &__container_main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__main_wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__main_avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__main_text {
+    cursor: pointer;
+  }
+
+  &__button_in {
+    cursor: pointer;
+    border: transparent 1px solid;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__button_in:hover {
+    border: #2D2D37 1px solid;
+  }
+
+  &__button_up {
+    border: #2D2D37 1px solid;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__button_up:hover {
+    color: white;
+    background-color: #2D2D37;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &__icon_dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__container_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+  }
+
+  &__nav_img {
+    height: 100px;
+    max-width: 100%;
+  }
+
+  &__nav_wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__nav_button {
+    padding: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+
+    align-items: center;
+    margin-left: 1.5rem;
+
+    user-select: none;
+  }
+
+  &__text {
+    line-height: 1.5rem;
+    background-position: left 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    background-image: linear-gradient(to right, lightblue 0, black 100%);
+    transition: .2s ease-out;
+  }
+
+
+  &__text:hover {
+    background-size: 100% 2px;
+  }
+
+  &__nav_button:hover {
+    background-size: 100% 1px;
+  }
+
+  &__icon_arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.3s ease-out;
+    rotate: 90deg;
+  }
+
+  &__nav_button:hover + &__icon_arrow {
+    rotate: 0deg;
+  }
+
+  &__nav_link {
+    color: black;
+    margin: 1.25rem 1rem 1.25rem 1rem;
+    text-decoration: none;
+    display: block;
+
+    background-position: left 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    background-image: linear-gradient(to right, lightblue 0, black 100%);
+    transition: .2s ease-out;
+    user-select: none;
+  }
+
+  &__nav_link:hover {
+    background-size: 100% 2px;
+  }
+
+  &__nav_dropdown {
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    z-index: 2;
+    margin-left: -0.5rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transition: all .2s ease-out;
+  }
+
+  &__nav_button:hover &__nav_dropdown {
+    opacity: 1;
+  }
+
+  &__icon_dots {
+    cursor: pointer;
+  }
+}

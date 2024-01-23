@@ -1,0 +1,139 @@
+.area {
+  width: 100%;
+  background-color: #EFEFEF;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #2D2D37;
+  z-index: -1;
+}
+
+.subtitle {
+  padding-top: 1rem;
+  font-size: .85rem;
+  line-height: 1.45rem;
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
+.button {
+  user-select: none;
+  cursor: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  font-family: "Source Sans 3";
+  color: white;
+  padding: 0.75rem 2rem;
+  background-color: rgb(9, 176, 176);
+  transition: .3s all ease-in-out;
+  &:hover {
+    background-color: rgb(5, 103, 103);
+  }
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  background-color: rgba(38, 38, 38, 0.3);
+  opacity: 1;
+  transition: .3s all ease-in-out;
+}
+
+.block:hover .overlay {
+  background: rgba(9, 176, 176, .85);
+}
+
+.block_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.row {
+  display: flex;
+}
+
+.wrapper {
+  background-color: #2D2D37;
+  width: 100%;
+  margin: 0.25rem;
+}
+
+.block {
+  text-align: left;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  min-height: 14rem;
+  padding: 3rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: no-repeat center;
+  background-size: cover;
+  transition: .5s all ease-in-out;
+}
+
+.block_button {
+  z-index: 2;
+  padding: 0.75rem 2rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  width: fit-content;
+  font-family: "Source Sans 3";
+  font-size: .7rem;
+  margin-top: 1rem;
+  transition: .3s all ease-in-out;
+  &:hover {
+    color: #2D2D37;
+    background-color: white;
+  }
+}
+
+.block_title {
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  z-index: 2;
+}
+
+.block_subtitle {
+  z-index: 2;
+  background: transparent;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: .85rem;
+  line-height: 1.45rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: .8s cubic-bezier(.4,0,.2,1);
+}
+
+.block:hover .block_subtitle {
+  max-height: 20rem;
+}

@@ -1,0 +1,108 @@
+.description {
+  max-width: 100%;
+  padding-bottom: 60px;
+
+  &__about_wrapper {
+    padding-top: 4rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    max-width: 40%;
+  }
+
+  &__about {
+    padding-top: 0.5rem;
+    line-height: 1.27;
+    font-size: 0.65rem;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  &__overlay {
+    opacity: .3;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgb(45, 45, 55);
+  }
+
+  &__property {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+    color: rgba(67, 67, 78, 1);
+    font-size: .6rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1rem;
+    text-indent: -0.02em;
+    text-transform: uppercase;
+  }
+
+  &__license_wrapper {
+    display: flex;
+    font-family: "Source Sans 3";
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__license {
+    font-family: inherit;
+    padding-right: 0.75rem;
+    color: rgba(45, 45, 55, 1);
+    font-size: .8rem;
+    letter-spacing: .05em;
+    line-height: 1rem;
+    text-indent: -0.05em;
+    text-transform: uppercase;
+  }
+
+  &__active {
+    font-family: inherit;
+
+    font-size: .8rem;
+    letter-spacing: .05em;
+    line-height: 1rem;
+    text-indent: -0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__listing {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__listing_text {
+    font-family: inherit;
+    padding-right: 0.75rem;
+    color: rgba(45, 45, 55, 1);
+    font-size: .6rem;
+    letter-spacing: .05em;
+    line-height: 1rem;
+    text-indent: -0.05em;
+    text-transform: uppercase;
+  }
+}
+
+.container {
+  padding-top: 4rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 60%;
+}
+
+.swiper {
+  width: 60%;
+  padding-bottom: 0.5rem;
+}

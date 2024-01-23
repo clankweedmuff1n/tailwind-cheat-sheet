@@ -1,0 +1,26 @@
+.img {
+  background: url("https://media.placester.com/image/upload/c_scale,dpr_1.0,f_auto,fl_lossy,q_auto,w_768/c_scale,w_768/v1/inception-app-prod/YTVmMGM3NDAtNmZjMy00ZGUxLWFhNTQtY2ZhNzM0MGFkMjY2/content/2020/10/asdasd.jpg") center;
+  background-size: cover;
+}
+
+.title {
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: .85rem;
+  line-height: 1.45rem;
+  font-family: "Raleway";
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+.text {
+  line-height: 1.4;
+  color: rgba(var(--dark__text), 1);
+  font-size: .75rem;
+}
