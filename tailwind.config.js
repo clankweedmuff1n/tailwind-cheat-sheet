@@ -37,6 +37,8 @@ export default {
                 "dark-border": "rgba(var(--dark__border), .5)",
                 "dark-bg": "rgba(var(--accent__bg--dark), 1)",
                 "light-border-tone": "rgba(var(--light__border--tone), 1)",
+                "custom-overlay": "rgba(var(--dark__bg), 0.3)",
+                "light-bg": "rgba(var(--light__bg--tone), 1)",
                 accent: "rgba(var(--accent), 1)",
                 "accent-dark": "rgba(var(--accent__text--dark), 1)",
                 border: "hsl(var(--border))",

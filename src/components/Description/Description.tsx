@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './Description.module.scss';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import {StarIcon} from "./Icones/StarIcon";
 import Button from "../Button/Button.tsx";
+import {BiStar} from "react-icons/bi";
 
 class Description extends React.Component {
     render() {
@@ -30,9 +29,9 @@ class Description extends React.Component {
             },
         ];
         return (
-            <section className={styles.description}>
-                <div className={styles.container}>
-                    <div className={styles.description__wrapper}>
+            <section className="max-w-full pb-[60px]">
+                <div className="pt-16 flex justify-center m-auto max-w-[60%]">
+                    <div className="max-w-[40%]">
                         <h2 className="mb-8">Featured properties</h2>
                         <p className="pr-20 pb-8 font-raleway">It can be easy to get lost in the sea of real
                             estate possibilities. Modern condos, spacious single-family houses, victorian mansions,
@@ -42,7 +41,7 @@ class Description extends React.Component {
                         <Button onPress={console.log} message={"View More"}/>
                     </div>
                     <Swiper
-                        className={styles.swiper}
+                        className="w-[60%] pb-2"
                         modules={[Autoplay]}
                         slidesPerView={2}
                         autoHeight={true}
@@ -57,33 +56,38 @@ class Description extends React.Component {
                                 <SwiperSlide className="w-auto flex-col pr-3 pl-3" key={index}>
                                     <div className="flex justify-between">
                                         <div className="absolute left-0 top-0 flex pl-3 text-white">
-                                            <div className="z-10 text-sm bg-accent font-source p-2 font-bold">FEATURED</div>
-                                            <div className="z-10 text-sm bg-accent-dark font-source p-2 font-bold">VIRTUAL TOUR</div>
+                                            <div className="z-10 text-sm bg-accent font-source p-2 font-bold">FEATURED
+                                            </div>
+                                            <div
+                                                className="z-10 text-sm bg-accent-dark font-source p-2 font-bold">VIRTUAL
+                                                TOUR
+                                            </div>
                                         </div>
                                         <div className="absolute h-auto mr-3 right-0 top-0 z-10 bg-accent-dark">
-                                            <StarIcon className="m-2 w-4 h-4 text-white"/>
+                                            <BiStar className="m-2 w-4 h-4 text-white"/>
                                         </div>
                                     </div>
                                     <img className="relative"
                                          src={item.img}/>
                                     <div className="w-full flex-col h-fit shadow-md">
-                                        <h2 className="pt-3 pr-3 pb-2 pl-3 text-left font-normal text-base">15888 State Highway 11
+                                        <h2 className="pt-3 pr-3 pb-2 pl-3 text-left font-normal text-base">15888 State
+                                            Highway 11
                                             Highway, Cumby, TX, 75433</h2>
                                         <div className="flex mb-2">
-                                            <p className={styles.description__property}>4 BEDS</p>
-                                            <p className={styles.description__property}>2 BATH</p>
-                                            <p className={styles.description__property}>2,244 SQ FT</p>
-                                            <p className={styles.description__property}>$425,000</p>
+                                            <p className="pr-3 pl-3 text-sm uppercase font-bold">4 BEDS</p>
+                                            <p className="pr-3 pl-3 text-sm uppercase font-bold">2 BATH</p>
+                                            <p className="pr-3 pl-3 text-sm uppercase font-bold">2,244 SQ FT</p>
+                                            <p className="pr-3 pl-3 text-sm uppercase font-bold">$425,000</p>
                                         </div>
-                                        <div className={styles.description__license_wrapper}>
-                                            <p className={styles.description__license}>MLS# 20511804</p>
-                                            <p className={styles.description__active}>ACTIVE</p>
+                                        <div className="flex pr-3 pl-3">
+                                            <p className="pr-3 uppercase">MLS# 20511804</p>
+                                            <p className="pr-3 uppercase font-bold">ACTIVE</p>
                                         </div>
-                                        <div className={styles.description__listing}>
-                                            <p className={styles.description__listing_text}>Listing Agent:
-                                                Jamie NeSmith</p>
-                                            <p className={styles.description__listing_text}>Listing Office:
-                                                Core One Real Estate, L.L.C</p>
+                                        <div className="p-3 text-left">
+                                            <p className="text-sm uppercase">Listing Agent:
+                                                Jamie NeSmith
+                                                <br/>
+                                                Listing Office: Core One Real Estate, L.L.C</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -91,12 +95,12 @@ class Description extends React.Component {
                         ))}
                     </Swiper>
                 </div>
-                <div className={styles.description__about_wrapper}>
-                    <p className={styles.description__about}>All information is subject to change and should
+                <div className="pt-16 m-auto">
+                    <p className="pt-2 m-auto max-w-[60%] text-sm">All information is subject to change and should
                         be
                         independently verified. Copyright© 2022, HOUSTON REALTORS® INFORMATION SERVICE, INC. All Rights
-                        Reserved by Core One Real Estate Updated: 6th January, 2024 11:45 AM (UTC)</p>
-                    <p className={styles.description__about}>Listing information provided courtesy of the San
+                        Reserved by Core One Real Estate Updated: 6th January, 2024 11:45 AM (UTC)
+                        <br/>Listing information provided courtesy of the San
                         Antonio Board of Realtors. IDX information is provided exclusively for consumers' personal,
                         non-commercial use, and it may not be used for any purpose other than to identify prospective
                         properties consumers may be interested in purchasing. The data is deemed reliable, but is not

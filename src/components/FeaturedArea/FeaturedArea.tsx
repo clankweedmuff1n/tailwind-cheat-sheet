@@ -5,25 +5,25 @@ import Button from "../Button/Button.tsx";
 class FeaturedArea extends React.Component {
     render() {
         return (
-            <section className={styles.area}>
-                <div className={styles.container}>
-                    <div className={styles.title_wrapper}>
-                        <div className={styles.title_container}>
-                            <h2 className={styles.title}>Featured Area</h2>
-                            <p className={styles.subtitle}>Stunning views, outstanding properties, tight-knit
+            <section className="w-full bg-light-bg">
+                <div className="w-[60%] m-auto">
+                    <div className="w-full flex justify-between pt-6 pb-8">
+                        <div className="ml-1">
+                            <h2>Featured Area</h2>
+                            <p className="pt-4 font-raleway">Stunning views, outstanding properties, tight-knit
                                 communities. We guarantee unforgettable experiences.</p>
                         </div>
-                        <div className={styles.button_wrapper}>
+                        <div className="mr-1">
                             <Button onPress={console.log} message={"View more"}/>
                         </div>
                     </div>
-                    <div className={styles.block_wrapper}>
-                        <div className={styles.row}>
-                            <div className={styles.wrapper}>
-                                <div className={styles.block}>
+                    <div className="flex-col pb-12">
+                        <div className="flex">
+                            <div className="bg-dark-text w-full m-1">
+                                <div className="group-hover:max-h-12 text-left text-white w-full flex-col justify-center relative py-12 px-8 min-h-56 bg-no-repeat bg-center transition-all bg-cover">
                                     <div className={styles.overlay}></div>
-                                    <h2 className={styles.block_title}>Farmersville, Tx Homes for Rent and Sale</h2>
-                                    <p className={styles.block_subtitle}>What do we love about Collin County?</p>
+                                    <h2 className="group z-10">Farmersville, Tx Homes for Rent and Sale</h2>
+                                    <p className="font-raleway z-10 text-sm max-h-0 overflow-hidden transition-all">What do we love about Collin County?</p>
                                     <div className={styles.block_button}>Read More</div>
                                 </div>
                             </div>

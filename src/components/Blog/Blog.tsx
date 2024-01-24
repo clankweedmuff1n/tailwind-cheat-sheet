@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Blog.module.scss';
 import Button from "../Button/Button.tsx";
 import Post from "../Post/Post.tsx";
 
@@ -37,14 +36,14 @@ class Blog extends React.Component {
             }
         ];
         return (
-            <section className={styles.blog}>
-                <div className={`${styles.section} ${styles.section_title}`}>
-                    <h2 className={styles.title}>Latest blog posts</h2>
-                    <p className={styles.subtitle}>Expand your real estate knowledge - here are some of our latest blog
+            <section className="w-full flex flex-col justify-center items-center pb-16">
+                <div className="w-[60%] mt-16 flex flex-col text-center pb-5 m-auto">
+                    <h2 className="pb-8">Latest blog posts</h2>
+                    <p className="w-[60%] self-center">Expand your real estate knowledge - here are some of our latest blog
                         posts to help you out. Selling your property or purchasing a new, dream house can become
                         stress-free and exciting when you know what to expect! </p>
                 </div>
-                <div className={`${styles.section} ${styles.section_posts}`}>
+                <div className="w-[60%] flex m-auto mb-16 justify-between">
                     {posts.map((item, index) => (
                         <Post index={index} img={item.img} topic={item.topic} title={item.title} content={item.content} avatar={item.avatar} name={item.name} date={item.date}/>
                     ))}
